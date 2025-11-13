@@ -29,7 +29,7 @@ function LoginForm() {
       requestUrl: `${process.env.NEXT_PUBLIC_API_URL}/api/v1/users/login`,
     };
 
-    const apiResponse = await post(dataToBeSent, '/api/login');
+    const apiResponse = await post(dataToBeSent, '/api/v1/users/login');
 
     if (apiResponse.status === 'success') {
       SuccessfulOperationToast(toast, 'Welcome! Please wait to be redirected to the homepage!');
