@@ -43,7 +43,7 @@ function RegisterForm() {
       requestType: 'POST',
     };
 
-    const apiResponse = await post(dataToBeSent, '/auth/signup');
+    const apiResponse = await post(dataToBeSent, '/api/v1/users/register');
 
     if (apiResponse.status === 'success') {
       SuccessfulOperationToast(toast, 'Welcome! Please wait for a second to log in!');
